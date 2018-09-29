@@ -1,0 +1,44 @@
+{
+  "name": "pixijs_es6_webpack_test",
+  "version": "1.1.1",
+  "description": "my frst test from softgames pixijs + es6 + webpack + NPM - menu for three parts 1. card stack anim example 2. random group example 4. particles effect example ",
+  "main": "index.js",
+  "scripts": {
+    "translate_all": "./node_modules/.bin/babel ./src -d ./dist",
+    "webpack": "./node_modules/.bin/webpack",
+    "buildwebpack_cli": "./node_modules/.bin/webpack ./src/index.js -o ./dist/bundle.js --module-bind css=style-loader!css-loader",
+    "buildwebpack": "./node_modules/.bin/webpack ./src/index.js -o ./dist/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "translate_file": "./node_modules/.bin/babel ./src/index.js -o ./dist/index.js",
+    "myfirst": "echo \"My first NPM  webpack test  ./node_modules/.bin/\" ",
+    "start": "webpack-dev-server --open"
+  },
+  "keywords": [
+    "NPM",
+    "Pixijs",
+    "example"
+  ],
+  "author": "shammi seth",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "http-server": "^0.11.1",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "pixi-fps": "^1.1.3",
+    "pixi-particles": "^3.1.0",
+    "pixi-tween": "^0.2.0",
+    "pixi.js": "^4.8.2"
+  }
+}
